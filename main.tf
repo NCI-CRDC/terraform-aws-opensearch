@@ -104,7 +104,7 @@ resource "aws_opensearch_domain_policy" "this" {
 }
 
 data "aws_iam_policy_document" "this" {
-  count = var.crete_domain_policy ? 1 : 0
+  count = var.create_domain_policy ? 1 : 0
 
   statement {
     effect  = "Allow"
