@@ -1,5 +1,3 @@
-
-
 resource "aws_opensearch_domain" "this" {
   domain_name    = "${local.stack}-${var.domain_name_suffix}"
   engine_version = var.engine_version
@@ -77,7 +75,7 @@ resource "aws_opensearch_domain" "this" {
   }
 
   tags = merge(
-    
+
     {
       "Name" = "${local.stack}-${var.domain_name_suffix}"
     },
