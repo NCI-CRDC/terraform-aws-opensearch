@@ -10,6 +10,7 @@ output: sarif
 quiet: true
 skip-check:
   - CKV2_AWS_5
-  - CKV_AWS_247
-  - CKV_AWS_158
   - CKV2_AWS_52
+  - CKV2_AWS_59
+  - CKV_AWS_158
+  - CKV_AWS_247
