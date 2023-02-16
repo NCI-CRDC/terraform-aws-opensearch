@@ -63,6 +63,7 @@ No modules.
 | <a name="input_program"></a> [program](#input\_program) | the program associated with the application | `string` | n/a | yes |
 | <a name="input_security_group_ids"></a> [security\_group\_ids](#input\_security\_group\_ids) | id of the security group(s) to associate with the cluster | `set(string)` | n/a | yes |
 | <a name="input_subnet_ids"></a> [subnet\_ids](#input\_subnet\_ids) | ids of the target subnet(s) for the opensearch cluster deployment | `list(string)` | n/a | yes |
+| <a name="input_tags"></a> [tags](#input\_tags) | tags to apply to the load balancer and listeners (if created) | `map(string)` | `{}` | no |
 | <a name="input_warm_count"></a> [warm\_count](#input\_warm\_count) | number of warm nodes in the domain cluster | `number` | `null` | no |
 | <a name="input_warm_enabled"></a> [warm\_enabled](#input\_warm\_enabled) | whether to enable warm storage | `bool` | `false` | no |
 | <a name="input_warm_type"></a> [warm\_type](#input\_warm\_type) | instance type for warm nodes - valid values are ultrawarm1.medium.search, ultrawarm1.large.search and ultrawarm1.xlarge.search | `string` | `null` | no |
