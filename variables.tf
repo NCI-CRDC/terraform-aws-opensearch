@@ -192,3 +192,9 @@ variable "zone_awareness_enabled" {
   type        = bool
   description = "enable multi-availability zone deployments"
 }
+
+variable "tags" {
+  type        = map(string)
+  description = "tags to apply to the load balancer and listeners (if created)"
+  default     = {}
+}

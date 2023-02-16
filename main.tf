@@ -1,5 +1,3 @@
-
-
 resource "aws_opensearch_domain" "this" {
   domain_name    = "${local.stack}-${var.domain_name_suffix}"
   engine_version = var.engine_version
@@ -75,6 +73,14 @@ resource "aws_opensearch_domain" "this" {
     cloudwatch_log_group_arn = var.cloudwatch_error_log_group
     log_type                 = "ES_APPLICATION_LOGS"
   }
+
+  tags = merge(
+
+    {
+      "Name" = "${local.stack}-${var.domain_name_suffix}"
+    },
+    var.tags
+  )
 }
 
 resource "aws_iam_service_linked_role" "this" {
@@ -98,7 +104,7 @@ resource "aws_opensearch_domain_policy" "this" {
 }
 
 data "aws_iam_policy_document" "this" {
-  count = var.crete_domain_policy ? 1 : 0
+  count = var.create_domain_policy ? 1 : 0
 
   statement {
     effect  = "Allow"
